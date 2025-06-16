@@ -98,3 +98,6 @@ assets = [
 
 [package.metadata.generate-rpm.variants.bundle.conflicts]
 aw-awatcher = "*"
+
+[patch.crates-io]
+bitflags = { git = "https://github.com/bitflags/bitflags", tag = "2.9.0" }

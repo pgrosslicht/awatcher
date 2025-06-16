@@ -1,3 +1,4 @@
+mod cosmic_toplevel_management;
 #[cfg(feature = "gnome")]
 mod gnome_idle;
 #[cfg(feature = "gnome")]
@@ -101,6 +102,10 @@ async fn filter_first_supported(
             watch!(create_watcher::<
                 wl_foreign_toplevel_management::WindowWatcher,
             >(
+                client,
+                "Wayland window (wlr-foreign-toplevel-management-unstable-v1)"
+            ));
+            watch!(create_watcher::<cosmic_toplevel_management::WindowWatcher>(
                 client,
                 "Wayland window (wlr-foreign-toplevel-management-unstable-v1)"
             ));
