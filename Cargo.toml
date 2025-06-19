@@ -41,8 +41,6 @@ anyhow = { workspace = true }
 tokio = { workspace = true, features = ["rt", "macros", "signal"] }
 
 ksni = {version = "0.2.2", optional = true}
-aw-server = { git = "https://github.com/ActivityWatch/aw-server-rust", optional = true, rev = "656f3c9" }
-aw-datastore = { git = "https://github.com/ActivityWatch/aw-server-rust", optional = true, rev = "656f3c9" }
 open = { version = "5.3.2", optional = true }
 serde = { workspace = true, optional = true }
 
@@ -50,7 +48,7 @@ serde = { workspace = true, optional = true }
 default = ["gnome", "kwin_window"]
 gnome = ["watchers/gnome"]
 kwin_window = ["watchers/kwin_window"]
-bundle = ["ksni", "aw-server", "aw-datastore", "open", "serde"]
+bundle = ["ksni", "open", "serde"]
 
 [package.metadata.deb.variants.module]
 name = "aw-awatcher"

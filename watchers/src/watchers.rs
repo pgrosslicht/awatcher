@@ -107,7 +107,7 @@ async fn filter_first_supported(
             ));
             watch!(create_watcher::<cosmic_toplevel_management::WindowWatcher>(
                 client,
-                "Wayland window (wlr-foreign-toplevel-management-unstable-v1)"
+                "Wayland window (COSMIC ext-foreign-toplevel-list)"
             ));
             // XWayland gives _NET_WM_NAME on some windows in KDE, but not on others
             #[cfg(feature = "kwin_window")]
